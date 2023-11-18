@@ -5,7 +5,7 @@ import { InputUpload } from "@components/ui/input-upload";
 import { handleImageUpload } from "@lib/transformer";
 import { IImage } from "@lib/transformer/zip";
 
-export default function Home() {
+export default function Transform() {
   const [images, setImages] = useState<{ file: File; imageDataUrl: string }[]>(
     [],
   );
