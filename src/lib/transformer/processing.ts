@@ -1,9 +1,16 @@
 import { ChangeEvent } from "react";
 
+export const convertEventTargetIntoFiles = (
+  event: ChangeEvent<HTMLInputElement>,
+) => {
+  // "Array.from" is in order to create new instance
+  return Array.from(event.target.files || []);
+};
+
 export const handleImageUpload = async (
   event: ChangeEvent<HTMLInputElement>,
 ) => {
-  const files = Array.from(event.target.files || []);
+  const files = convertEventTargetIntoFiles(event);
 
   return await Promise.all(
     files.map(async (file) => {
