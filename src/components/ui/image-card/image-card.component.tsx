@@ -9,7 +9,13 @@ export const ImageCard = ({ imageDataUrl }: IImageCard) => {
   const identifier = new Date().getTime();
 
   return (
-    <div style={{ margin: "10px", textAlign: "center" }}>
+    <div
+      style={{
+        margin: "10px",
+        textAlign: "center",
+        border: "10px solid black",
+      }}
+    >
       <ImagePreview imageDataUrl={imageDataUrl} identifier={identifier} />
       <DownloadImageButton
         imageDataUrl={imageDataUrl}
